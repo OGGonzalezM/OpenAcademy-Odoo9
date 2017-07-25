@@ -36,3 +36,5 @@ class Navintharh(models.Model):
 	x_navintha_listadocompetencias = fields.Text(string="Listado de competencias")
 	#Perfiles, competencias, habilidades y capacidades requeridas
 	x_navintha_per_comp_hab_cap = fields.Text(string="Perfiles, competencias, habilidades y capacidades requeridas")
+
+        x_navintha_skills = fields.Many2many('hr.skill')

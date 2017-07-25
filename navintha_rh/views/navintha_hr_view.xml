@@ -72,6 +72,9 @@
                                 <label for="x_navintha_per_comp_hab_cap">Perfiles, competencias, habilidades y capacidades requeridas</label>
                                 <field name="x_navintha_per_comp_hab_cap"></field>
                             </page>
+			    <page string="Habilidades">
+				<field name="x_navintha_skills"/>
+			    </page>
                     </notebook>
                 </xpath>
             </field>

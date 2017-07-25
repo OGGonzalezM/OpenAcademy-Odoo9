@@ -23,7 +23,7 @@
     # always loaded
     'data': [
         'views/navintha_hr_view.xml',
-        'views/skills.xml',
+        #'views/navintha_skills.xml',
     ],
     'installable':True,
     'auto_install':False,

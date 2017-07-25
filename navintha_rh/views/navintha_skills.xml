@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record id="navintha_skills_view" model="ir.ui.view">
+			<field name="name">hr.job_skills</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_hr_job_form"></field>
+			<field name="arch" type="xml">
+				<notebook position="inside">
+					<page string="Habilidades">
+						<field name="skill_ids"></field>
+					</page>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</openerp>
