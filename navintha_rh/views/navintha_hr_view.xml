@@ -44,33 +44,19 @@
                             <page string="Perfil del puesto">
                                 <label for="x_navintha_edad">Edad</label>
                                 <field name="x_navintha_edad"></field>
-
-                                <label for="x_navintha_escolaridad"></label>
-                                <field name="x_navintha_escolaridad"></field>
-
+				<div class="col-md-4">
+	                                <label for="x_navintha_escolaridad"></label>
+                                	<field name="x_navintha_escolaridad"></field>
+				</div>
                                 <label for="x_navintha_experiencia">Experiencia</label>
                                 <field name="x_navintha_experiencia"></field>
 
-                                <label for="x_navintha_competenciastecnicas">Experiencias Técnicas</label>
-                                <field name="x_navintha_competenciastecnicas"></field>
-                                
-                                <label for="x_navintha_manejomaquinariaequipo">Manejo de maquinario y/o equipo</label>
-                                <field name="x_navintha_manejomaquinariaequipo"></field>
-                                
-                                <label for="x_navintha_manejodesoftware">Manejo de software</label>
-                                <field name="x_navintha_manejodesoftware"></field>
-                                <label for="x_navintha_idiomas">Idiomas</label>
-                                <field name="x_navintha_idiomas"></field>
                                 <label for="x_navintha_disponibilidadviajar">Disponibilidad para viajar</label>
                                 <field name="x_navintha_disponibilidadviajar"></field>
                                 <br />
                                 <label for="x_navintha_disponibilidadcambioresidencia">Disponibilidad para cambio de residencia</label>
                                 <field name="x_navintha_disponibilidadcambioresidencia"></field>
                                 <br />
-                                <label for="x_navintha_listadocompetencias">Listado de competencias</label>
-                                <field name="x_navintha_listadocompetencias"></field>
-                                <label for="x_navintha_per_comp_hab_cap">Perfiles, competencias, habilidades y capacidades requeridas</label>
-                                <field name="x_navintha_per_comp_hab_cap"></field>
                             </page>
 			    <page string="Habilidades">
 				<field name="x_navintha_skills"/>
