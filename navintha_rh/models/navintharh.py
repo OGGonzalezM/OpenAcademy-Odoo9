@@ -6,7 +6,7 @@ class Navintharh(models.Model):
 	_inherit = 'hr.job'
 
 	x_navintha_fechadeelaboracion = fields.Date(string="Fecha de elaboración")
-	x_navintha_fechadeaprovacion = fields.Date(string="Fecha de aprovación")
+	x_navintha_fechadeaprovacion = fields.Date(string="Fecha de aprobación")
 	x_navintha_propositodelpuesto = fields.Text(string="Propósito del puesto")
 
 
@@ -14,7 +14,7 @@ class Navintharh(models.Model):
         x_navintha_responsabilidades = fields.Many2one('res.partner', string="Responsabilidades")
 	x_navintha_relacionesexternas_delpuestoconotros = fields.Text(string="Relaciones externas con otros puestos")
 
-	x_navintha_responsabilidades_descripcion = fields.Text(string="Responsabilidades")
+	x_navintha_responsabilidades_descripcion = fields.Text(string="Responsabilidades y frecuencia de realización")
 	x_navintha_responsabilidades_frecuenciaderealizacion = fields.Text(string="Frecuencia de realización")
 
 	x_navintha_ltd_desicion = fields.Boolean(string="Libertad para toma de desiciones")
@@ -22,9 +22,14 @@ class Navintharh(models.Model):
 	x_navintha_condicionesdeltrabajo = fields.Text(string="Condiciones del trabajo")
 
 	#Perfil del puesto
-	x_navintha_edad = fields.Integer(string="Edad")
+	x_navintha_edad = fields.Selection(selection=[('20 - 25 Años','20 - 25 Años'),
+                                                      ('25 - 30 Años','25 - 30 Años'),
+                                                      ('30 - 35 Años','30 - 35 Años'),
+                                                      ('35 - 40 Años','35 - 40 Años'),
+                                                      ('40 - 45 Años','40 - 45 Años')],
+                                                      string="Rango de edades")
 
-	x_navintha_escolaridad = fields.Many2one('hr.escolaridad', string="Esolaridad")
+	x_navintha_escolaridad = fields.Many2one('hr.escolaridad', string="Escolaridad")
 
         x_navintha_experiencia = fields.Text(string="Experiencia")
 	x_navintha_competenciastecnicas = fields.Text(string="Competencias técnicas")
@@ -37,4 +42,7 @@ class Navintharh(models.Model):
 	#Perfiles, competencias, habilidades y capacidades requeridas
 	x_navintha_per_comp_hab_cap = fields.Text(string="Perfiles, competencias, habilidades y capacidades requeridas")
 
-        x_navintha_skills = fields.Many2many('hr.skill')
+        x_navintha_skills = fields.Many2many('hr.skill', string="Habilidades")
+
+        x_navintha_equipoasignado = fields.Many2many('hr.equipoasignado', string="Equipo asignado")
+        x_navintha_indicadorespuesto = fields.Many2many('hr.job_indicadorespuesto', string="Indicadores del puesto")

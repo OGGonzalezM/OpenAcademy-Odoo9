@@ -1,0 +1,31 @@
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="jb_list_action">
+            <field name="name">Perfiles_de_empleo</field>
+            <field name="res_model">hr.job</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crear un puesto
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="rh_menuitem" name="Recursos Humanos" parent="main_navintha_menu" />
+        <menuitem id="hr_job_item" name="Puestos" parent="rh_menuitem" action="jb_list_action"/>
+
+	<record model="ir.actions.act_window" id="empleados_list_action">
+            <field name="name">Empleados</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crear un empleado
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="empleados_job_item" name="Empleados" parent="rh_menuitem" action="empleados_list_action"/>
+
+    </data>
+</openerp>
