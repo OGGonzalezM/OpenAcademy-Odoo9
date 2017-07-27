@@ -6,13 +6,16 @@
             <field name="model">hr.job</field>
             <field name="inherit_id" ref="hr.view_hr_job_form"></field>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='description']" position="after">
+		<xpath expr="//field[@name='no_of_recruitment']" position="after">
+		    <field name="x_navintha_plantillaminimanecesaria"/>
+		</xpath>
+                <xpath expr="//field[@name='x_navintha_plantillaminimanecesaria']" position="after">
 		    <div class="row">
-			<div class="col-md-3">
+			<div class="col-md-6">
 				<label for="x_navintha_fechadeelaboracion">Fecha de elaboración</label>
 	                        <field name="x_navintha_fechadeelaboracion"></field>
                    	</div>
-			<div class="col-md-3 col-xs-6">
+			<div class="col-md-6">
 		        	<label for="x_navintha_fechadeaprovacion">Fecha de aprovación</label>
 	                        <field name="x_navintha_fechadeaprovacion"></field>
 			</div>
@@ -62,13 +65,18 @@
 			    <page string="Habilidades">
 				<field name="x_navintha_skills"/>
 			    </page>
-
-			    <page string="Equipo asignado">
-				<field name="x_navintha_equipoasignado" />
+			    <page string="Equipo asignable">
+    				<field name="x_posibleequipo_navintha">
+    				</field>
 			    </page>
 
 			    <page string="Indicadores del puesto">
-				<field name="x_navintha_indicadorespuesto" />
+				<field name="x_navintha_indicadorespuesto">
+				    <tree>
+					<field name="name"/>
+					<field name="category_id"/>
+				    </tree>
+				</field>
 			    </page>
 
                     </notebook>
